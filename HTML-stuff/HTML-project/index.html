@@ -1,47 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The lil Taco Shop</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <header>
-    <h1>Welcome to the little Taco Shop</h1>
-    <nav>
-      <ul>
-        <li>About LTS</li>
-        <li>Our Menu</li>
-        <li>Store Hours</li>
-        <li>Contact Us</li>
-      </ul>
-    </nav>
-    <figure>
-      <img src="./img/tacos_and_drink_400x267.png" alt="tacos and a drink" />
-      <figcaption>Tacos and a drink</figcaption>
-    </figure>
-  </header>
-  <hr>
-  <main>
-    <section>
-      <article>
-        <h2>About LTS</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius illum excepturi quas cumque dicta nostrum officia laboriosam quaerat, quisquam nemo recusandae consequuntur ex, incidunt in dolorum iste dolor! Velit.</p>
-        <h3>Taco Trivia</h3>
-        <details>
-          <summary>When did tacos first appeared in the US?</summary>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, laborum? Voluptatibus iste excepturi corporis doloremque maxime voluptatum quasi consequuntur ullam cum, ipsam labore ab unde laboriosam repudiandae itaque mollitia eius.</p>
-        </details>
-      </article>
-      <hr>
-    </section>
-    <section>
-      <article>
-        <h2>Our Menu</h2>
-      </article>
-    </section>
-  </main>
-  <footer></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The lil Taco Shop</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the little Taco Shop</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About LTS</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li>Store Hours</li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+      <figure>
+        <img src="./img/tacos_and_drink_400x267.png" alt="tacos and a drink" />
+        <figcaption>Tacos and a drink</figcaption>
+      </figure>
+    </header>
+    <hr />
+    <main>
+      <section id="about">
+        <article>
+          <h2>About LTS</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius
+            illum excepturi quas cumque dicta nostrum officia laboriosam
+            quaerat, quisquam nemo recusandae consequuntur ex, incidunt in
+            dolorum iste dolor! Velit.
+          </p>
+          <h3>Taco Trivia</h3>
+          <details>
+            <summary>When did tacos first appeared in the US?</summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+              laborum? Voluptatibus iste excepturi corporis doloremque maxime
+              voluptatum quasi consequuntur ullam cum, ipsam labore ab unde
+              laboriosam repudiandae itaque mollitia eius.
+            </p>
+          </details>
+        </article>
+        <hr />
+      </section>
+      <section id="menu">
+        <article>
+          <h2>Our Menu</h2>
+          <table>
+            <caption>
+              Our Tacos
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Tacos</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="3">Crunchy</th>
+                <td>1</td>
+                <td>&dollar;1.00</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>&dollar;2.00</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>&dollar;3.50</td>
+              </tr>
+              <tr>
+                <th rowspan="3">Soft</th>
+                <td>1</td>
+                <td>&dollar;4.50</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>&dollar;5.50</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>&dollar;6.00</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Chips &amp; Salsa &dollar;2</td>
+              </tr>
+            </tfoot>
+          </table>
+        </article>
+      </section>
+    </main>
+    <a href="#">Back to top</a>
+    <hr />
+    <footer>
+      <p>Copyright &copy; The Little Taco Shop</p>
+    </footer>
+  </body>
 </html>
