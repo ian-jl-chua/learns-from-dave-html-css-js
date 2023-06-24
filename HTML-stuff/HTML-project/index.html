@@ -33,16 +33,24 @@
             quaerat, quisquam nemo recusandae consequuntur ex, incidunt in
             dolorum iste dolor! Velit.
           </p>
-          <h3>Taco Trivia</h3>
-          <details>
-            <summary>When did tacos first appeared in the US?</summary>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-              laborum? Voluptatibus iste excepturi corporis doloremque maxime
-              voluptatum quasi consequuntur ullam cum, ipsam labore ab unde
-              laboriosam repudiandae itaque mollitia eius.
-            </p>
-          </details>
+          <aside>
+            <h3>Taco Trivia</h3>
+            <details>
+              <summary>When did tacos first appeared in the US?</summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                laborum? Voluptatibus iste excepturi corporis doloremque maxime
+                voluptatum quasi consequuntur ullam cum, ipsam labore ab unde
+                laboriosam repudiandae itaque mollitia eius. (Source:
+                <cite>
+                  <a href="#">blah blah blah</a>
+                </cite>
+                )
+              </p>
+
+              <!-- cite is like a citation element -->
+            </details>
+          </aside>
         </article>
         <hr />
       </section>
@@ -62,7 +70,7 @@
             </thead>
             <tbody>
               <tr>
-                <th rowspan="3">Crunchy</th>
+                <th scope="row" rowspan="3">Crunchy</th>
                 <td>1</td>
                 <td>&dollar;1.00</td>
               </tr>
@@ -75,7 +83,7 @@
                 <td>&dollar;3.50</td>
               </tr>
               <tr>
-                <th rowspan="3">Soft</th>
+                <th scope="row" rowspan="3">Soft</th>
                 <td>1</td>
                 <td>&dollar;4.50</td>
               </tr>
