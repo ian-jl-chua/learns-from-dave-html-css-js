@@ -1,0 +1,22 @@
+body {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: papayawhip;
+  color: rgb(255, 0, 0);
+}
+
+p{
+  color: rgba(0, 0, 0, .8);
+}
+/* hex codes are done with #, like #0000FF */
+
+/* with font-size we generally don't want to set and absolute value like "px" and would try to avoid "%" as well, we can let the user decide on what font using their browser settings */ 
+
+/* rem is "relative to the root", which is the highest point ":root" . It is not relative to the parent element. These are normally used for font-size */
+
+/* em is "relative to the parent", which is the parent of the CURRENT element. It is relative to any changes of the parent element as well. Normally used on margins and paddings*/
+
+
+
+/* setting a "%" would be a percentage of the element but this would be relative to the parent as well */
