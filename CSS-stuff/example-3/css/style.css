@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* "box-sizing: content-box" is the default */
+/* "border-box" does the calculation for us. So for example if a width is set to 400px, border-box does the calculation automatically to factor in the content, padding and border. Margin is not included in the calculation */
+
+/* so with border-box, a width of 400px = content + padding + border. All of which add up to the width of 400px */
+
+
+.container{
+  border: 2px dashed red;
+  font-size: 1.5em;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+/* margin and padding, have shorthand */
+/* margin: top, right, bottom, left 
+or margin: top-bottom, left-right */
+/* or the long winded margin-top, margin-bottom, margin-left and margin-right */
+
+/* too much to do for border, just google */
+
+/* "outline" is on the outer side of border but this is not commonly used */
