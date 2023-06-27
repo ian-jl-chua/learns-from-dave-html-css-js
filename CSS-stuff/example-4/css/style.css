@@ -1,0 +1,31 @@
+/* typography is the way that text is arranged and presented */
+
+body {
+  padding: 10%;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* input, button{
+  font: inherit;
+} */
+
+p {
+  line-height: 1.5;
+
+}
+
+/* a few common text settings */
+
+/* text-decoration: */
+/* can be underline or overline or line-through or none */
+
+/* text-transform: */
+/* can be capitalized or lowercase or uppercase */
+
+/* text-align: */
+/* can be left or right or justify (like in news paper or magazine) */
+
+/* you can also choose line-height to put space between lines */
+
+/* there is also letter-spacing and word-spacing */
