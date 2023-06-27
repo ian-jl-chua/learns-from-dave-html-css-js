@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+/* list-style-type lets you choose all the types you can set your list */
+
+ul {
+  list-style-type: square;
+  text-align: center;
+  list-style-position: inside;
+  line-height: 1.5;
+  /* list-style-image: url('../img/checkmark.png'); */
+  color: green;
+}
+
+/* list-style shorthand would be... */
+/* list-style: (fallback) (img) (position) */
+/* list-style: square url('../img/checkmark.png') inside */
+
+ul li:nth-child(2) {
+  color: red;
+}
+
+/* the nth-child can have a specific number like above or (odd) or (even) which targets odd and even numbers */
+
+ul ::marker{
+  color: blue;
+  font-size: 1em;
+  content: "Only $5 >> ";
+}
