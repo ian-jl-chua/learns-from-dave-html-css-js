@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+}
+
+.columns {
+  columns: 4 250px;
+  column-rule: 3px solid blue;
+  column-gap: 3rem;
+}
+/* is a short hand for column-count: 4;
+  column-width: 250px; */
+
+.columns p {
+  margin-top: 0;
+}
+
+.columns h2{
+  margin-top: 0;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  /* break-inside: avoid; */
+}
+/* ^ under normal circumstances we would use "break-inside: avoid" because the padding can spill over to another column. But it seems that from testing it out on browsers, this doesn't actually spill over */
+
+.columns .quote {
+  font-size: 3rem ;
+  text-align: center;
+  color: #333;
+  column-span: all;
+  margin-top: 2rem;
+}
+
+.nowrap{
+  white-space: nowrap;
+}
