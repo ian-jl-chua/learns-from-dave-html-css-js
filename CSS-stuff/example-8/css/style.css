@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: right;
+  background-color: red;
+  margin: 0;
+}
+
+li{
+  display: inline-block;
+  margin-inline: .5rem;
+}
+
+li a{
+color: white;
+text-decoration: none;
+}
+
+li a:hover,
+li a:focus{
+  text-decoration: underline;
+}
+
+
+
+/* p{
+  background-color: green;
+}
+
+.opposite{
+  background-color: red;
+  display: inline-block;
+  padding: 2rem;
+  margin-top: 100px;
+  height:100px;
+} */
+
+
+
+/* displays */
+/* inline will set it in line with the paragraph but when you add padding it will blow it out of the block element, you can see what happens if you comment out the display on ".opposite"*/
+
+/* by using inline-block, we are able to add margin and alter the height */
+
+/* block elements stack on top of each other, inline elements do not stack on top (they overlap) */
+
+/* block level elements take up 100% width, unless they are contained, inline only take up the space of the content */
