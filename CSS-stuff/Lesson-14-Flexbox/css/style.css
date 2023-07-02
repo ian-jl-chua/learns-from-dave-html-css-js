@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-evenly;
+  gap:1rem;
+  align-items: center;
+  flex-flow: row wrap;
+  align-content: space-evenly;
+} 
+
+/* flex-flow is shorthand for flex-direction and flex-wrap */
+
+/* it takes the flex-direction property first, then flex-wrap second */
+
+.box {
+  /* min-width: 100px; */
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100px;
+  flex-grow: 1;
+  /* flex: 1 1 150px; */
+}
+
+/* flex-basis is kinda doing what min-width is doing */
+
+.box:nth-child(2){
+  flex-grow: 2;
+}
+
+/* flex-grow works with flex-basis, so after they have their 100px, the one with flex-grow 2, will get more room to grow */
+
+/* flex-shrink does the opposite of flex-grow, so the bigger the shrink, the smaller it shrinks */
+
+/* flex-grow lets items grow larger than flex-basis, flex-shrink lets items shrink smaller than flex-basis */
+
+/* shorthand for flex-basis and flex-grow/shrink is "flex" */
+/* flex: (grow) (shrink) (basis) */
