@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(9 , 1fr);
+  grid-auto-rows: 50px auto 50px;
+  grid-template-areas: 
+  "hd hd hd hd hd hd hd hd hd"
+  "mn mn mn mn mn mn mn sb sb"
+  "ft ft ft ft ft ft ft ft ft";
+  gap: .5rem;
+}
+
+.el{
+  background-color: purple;
+  color: white;
+  display: grid;
+  place-content: center;
+}
+
+.header{
+  grid-area: hd;
+}
+
+.sidebar{
+  grid-area: sb;
+  background-color: green;
+}
+
+.footer{
+  grid-area: ft;
+}
+
+.container {
+  grid-area: mn;
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 2fr);
+  grid-auto-rows: minmax(150px, auto);
+  gap: 1em;
+}
+
+/* the opposite exist, so grid-template-rows and grid-auto-columns */
+/* for gap, you can be more specific by using row-gap or column-gap. If it is just gap, then it can take 2 values gap: (row) (column) */
+
+.box {
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.box:first-child {
+  background-color: red;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+/* place-content is the shorthand for align-content and justify-content */
+/* place-content: (align-content) (justify-content) */
+
+
+/* the above can be shortened to this*/
+/* .box:first-child {
+  background-color: red;
+  grid-column: 1 /4;
+  grid-row: 1/3;
+} */
+.box:nth-child(2){
+  background-color: blue;
+  grid-column: 1/5;
+  grid-row: 3/4;
+}
