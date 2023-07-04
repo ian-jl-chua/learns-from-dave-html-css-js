@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* || UTILITY CLASSES */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 1.5rem 'Nunito', sans-serif;
+  min-height: 100vh;
+  background-color: #475569;
+  background-image: radial-gradient(whitesmoke, #475569);
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: #1e293b;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* You can also use :is() here but if you put a class inside the :is(), then this would change the specificity of it entirely */
+/* This currently has specificity of (0,0,1) */
+/* :is(header,
+footer) {
+  position: sticky;
+  background-color: #1e293b;
+  color: whitesmoke;
+  text-align: center;
+} */
+/* But if we add a class of ".card" for example */
+/* :is(header,
+footer, .card) {
+  position: sticky;
+  background-color: #1e293b;
+  color: whitesmoke;
+  text-align: center;
+} */
+/* This would have a specificity of (0,1,1) */
+
+/* Using :where() if you don't want it to increase your specificity because it has a specificity of (0,0,0) */
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-bottom: 2px solid #000;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Instead of this */
+/* nav a:link,
+nav a:visited {
+  color: #000;
+} */
+/* We can use this */
+nav a:any-link {
+  color: #000;
+}
+
+/* Original Code */
+/* nav a:hover,
+nav a:focus {
+  color: hsla(0, 0%, 20%, 0.6);
+} */
+
+/* Will use Code 2 because Dave is using this in his CSS course */
+nav :is(a:hover, a:focus) {
+  color: hsla(0, 0%, 20%, 0.6);
+}
+
+/* Code Snippet 1 */
+/* nav a:is(:hover,:focus){
+  color: hsla(0, 0%, 20%, 0.6);
+} */
+/* Code Snippet 2 */
+/* nav :is(a:hover,a:focus){
+  color: hsla(0, 0%, 20%, 0.6);
+} */
+
+/* Here are 2 different codes that are similar in their functionality:
+
+1. **Code Snippet 1: `nav a:is(:hover,:focus)`**
+   - This snippet selects `<a>` elements that are descendants of `<nav>` elements.
+   - It applies the styles to `<a>` elements when they are either being hovered over or focused.
+   - The styles within the selector will be applied directly to the `<a>` elements that match the specified states.
+
+2. **Code Snippet 2: `nav :is(a:hover,a:focus)`**
+   - This snippet selects any descendant elements within `<nav>` elements that are `<a>` elements.
+   - It applies the styles to any descendant `<a>` elements when they are either being hovered over or focused.
+   - The styles within the selector will be applied to any descendant `<a>` elements that match the specified states.
+
+Both code snippets have similar functionality, which is to apply the specified color to `<a>` elements when they are either being hovered over or focused. However, they differ in terms of the specificity of their selectors.
+
+In general, Code Snippet 1 (`nav a:is(:hover,:focus)`) has higher specificity because it specifically targets `<a>` elements that are direct descendants of `<nav>` elements. On the other hand, Code Snippet 2 (`nav :is(a:hover,a:focus)`) has a lower specificity as it targets any descendant elements within `<nav>` elements that are `<a>` elements.
+
+Depending on your specific HTML structure and styling requirements, you can choose the code snippet that best suits your needs. If you only want to target direct `<a>` descendants of `<nav>`, Code Snippet 1 is more appropriate. If you want to target any descendant `<a>` elements within `<nav>`, including nested ones, Code Snippet 2 would be suitable. */
+
+nav a:active {
+  color: red;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+footer {
+  bottom: 0;
+}
+
+/* || PROFILE CARD */
+.card {
+  scroll-margin-top: 8rem;
+  width: min(100%, 350px);
+  background-color: #cbd5e1;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:target {
+  border: 2px solid red;
+}
+
+.card figure {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card img {
+  border: 5px double #333;
+  border-radius: 50%;
+}
+
+.card img:not([alt]) {
+  border: 10px solid blue;
+}
+
+/* Using [alt] selects any image with the  "alt" attribute */
+/* and if you add a :not(), it means images without an "alt" attribute. This is a good way to check images to make sure they all have "alt" attribute */
+
+.card:nth-child(2){
+background-color: antiquewhite;
+}
+/* value inside :nth-child() can be "odd" and "even" as well, it doesn't have to be a specific number */
+
+.card figcaption {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.card figcaption::first-letter{
+  font-size: 3rem;
+}
+
+.card figcaption::after{
+  content: 'hello';
+  display: block;
+}
+/* you can use ::before or ::after to add content */
+
+.card p{
+  position: relative;
+}
+
+.card p::before{
+  content: open-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -.25em;
+  left: -.5em;
+}
+.card p::after{
+  content: close-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -.25em;
+  right: -.5em;
+}
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+  main {
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 1rem;
+  }
+  .card {
+    width: min(100%, 400px);
+  }
+  .card:last-child {
+    order: -1;
+  }
+}
+
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+  nav {
+    display: none;
+  }
+  .card {
+    width: min(100%, 325px);
+  }
+  .card figure {
+    flex-flow: column-reverse;
+  }
+  .card p {
+    margin-top: 1rem;
+  }
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+  .card {
+    width: min(100%, 400px);
+  }
+  .card:nth-child(2) {
+    order: -1;
+  }
+}
+
+/* || XL  */
+@media screen and (min-width: 1200px) {
+  .card {
+    width: min(calc(33% - 1rem), 500px);
+  }
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  .card {
+    width: min(calc(33% - 0.25rem), 200px);
+  }
+
+  .card figcaption,
+  .card p {
+    font-size: 1.25rem;
+  }
+}
