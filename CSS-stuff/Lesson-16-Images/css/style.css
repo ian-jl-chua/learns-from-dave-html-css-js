@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* Begin reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+/* End reset */
+
+/* Utility */
+.nowrap {
+  white-space: nowrap;
+}
+.offscreen {
+  position: absolute;
+  left: -1000px;
+}
+/* End Utility */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+
+  background-color: aliceblue;
+  /* background-image: url('../img/bubbles.png'),
+    linear-gradient(to left, steelblue, white);
+  background-repeat: repeat-y, no-repeat;
+  background-position: right center; */
+
+  background: repeat-y right center url('../img/bubbles.png'),
+    no-repeat linear-gradient(to left, steelblue, white);
+  background-size: 20%, auto;
+}
+
+/* background is a shorthand that combines "image, repeat, position" , it can also include size, but it gets too complex to read */
+
+/* on linear gradient, you can also use "to left" or "to bottom" etc... to change the direction */
+
+/* in this example background-repeat can take 2 values first for the bubbles img (because we did the url first), then the second for the gradient */
+/* same for background-size, first value is for bubbles and second for the gradient */
+
+/* as for background-position, first value tells bubbles where to go and second value aligns the background image to element, the DEFAULT for the second value is always center anyway */
+
+.container {
+  background-color: green;
+  background-image: url('../img/map-2176x1451.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.hero {
+  border-bottom: 2px solid;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  background-color: hsla(0, 0%, 50%, 0.4);
+  /* background-color: green ;
+  background-image: url('../img/map-2176x1451.png');
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.h1 {
+  font-size: 500%;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px black;
+  /* background-color: hsla(0, 0%, 0%, 0.4);
+  padding: .25rem;
+  border-radius: 10px; */
+}
+
+.profile-pic-fig {
+  width: 35%;
+}
+
+.profile-pic-fig img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 5px double gray;
+  border-radius: 50%;
+}
+
+.example {
+  margin-top: 1rem;
+  padding-left: 20px;
+  border: 1px solid red;
+}
+
+.example img {
+  width: 25%;
+  height: auto;
+}
+
+.clip {
+  font-weight: 800;
+  font-size: 16rem;
+  text-align: center;
+  background-image: url('../img/scenic-2200x1331.png');
+  background-size: 100%;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
