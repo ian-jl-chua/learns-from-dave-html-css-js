@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 * {
   margin: 0;
@@ -32,4 +32,95 @@ div {
   border: 1px solid #000;
   display: grid;
   place-content: center;
+}
+
+div:first-child {
+  background-color: dodgerblue;
+  /* transform: translateX(-50%); */
+  /* transform: rotateX(180deg); */
+  /* transform: scaleX(120%); */
+  /* transform: skewX(10deg); */
+}
+div:nth-child(2) {
+  background-color: yellow;
+  /* transform: translateY(-2rem); */
+  /* transform: rotateY(180deg); */
+  /* transform: scaleY(120%); */
+  /* transform: skewY(-10deg); */
+}
+div:last-child {
+  background-color: lime;
+  /* transform: translate(100%, -5rem); */
+  /* transform: rotate(45deg); */
+  /* transform: scale(120%); */
+  /* transform: skew(-10deg, -10deg); */
+}
+
+div:hover {
+  background-color: midnightblue;
+  /* transition-property: background-color, transform;
+  transition-duration: 2s, 3s;
+  transition-delay: .5s;
+  transition-timing-function: linear; */
+  transition: all 2s 0.5s;
+}
+
+/* Here we use the shorthand transition */
+
+/* NOTE that the 3s in transition-duration, applies to the transform as mentioned above. If not values supplied then it just takes the 2s. Like the transition-delay would apply to bg-color and transform */
+
+div:last-child:hover {
+  transform: rotate(180deg);
+}
+
+/* ALL ABOUT TRANSITION */
+/* TRANSITION TAKES 4 VALUES */
+/* 1)Transition Property:
+      all: Specifies that all properties should transition.
+      Property Name: Specifies the specific property or properties that should transition, such as color, opacity, width, etc.
+
+  2)Transition Duration: Specifies the duration of the transition effect.
+      Value: A time value, such as 0.3s (seconds), 1s (seconds), 500ms (milliseconds), etc.
+
+  3)Transition Timing Function: Specifies the timing function used for the transition.
+      ease (default): Specifies a transition effect with a slow start, then fast, then ends slowly.
+      linear: Specifies a transition effect with a constant speed.
+      ease-in: Specifies a transition effect with a slow start.
+      ease-out: Specifies a transition effect with a slow end.
+      ease-in-out: Specifies a transition effect with a slow start and end.
+      cubic-bezier(n,n,n,n): Specifies a custom cubic Bezier curve for the transition effect.
+
+  4)Transition Delay: Specifies a delay before the transition effect starts.
+      Value: A time value, such as 0.3s (seconds), 1s (seconds), 500ms (milliseconds), etc. */
+
+/* YOU CAN ALSO USE THIS AS A COMBO */
+/* transition: color 0.3s ease-in-out, opacity 1s linear;
+ */
+
+.animate {
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: 5;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+/* OR USE THIS */
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(300px) rotate(180deg);
+  }
+  66% {
+    transform: translateX(-300px) rotate(-180deg);
+  }
+  100% {
+    transform: translateX(0);
+    background-color: rebeccapurple;
+  }
 }
