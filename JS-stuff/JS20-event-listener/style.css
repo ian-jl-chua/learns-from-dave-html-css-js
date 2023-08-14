@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: black;
+  color: #fff;
+  padding: 1rem;
+}
+
+h1{
+  display: inline;
+}
+
+main{
+  height: 100vh;
+}
+
+.second-view {
+  color: wheat;
+  height: 280px;
+  width: 365px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view {
+  display: flex;
+}
+
+.green {
+  background-color: aquamarine;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: aqua;
+}
+
+.height100 {
+  height: 100px;
+}
+
+.form-div{
+  position: fixed;
+  background-color: aliceblue;
+display: inline-block;
+}
+
+#view1 {
+  background-color: gray;
+  margin: 2rem;
+  padding: 1rem;
+  height: 350px;
+  width: 400px;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+#view2 {
+  margin: 3rem;
+  padding: 0.8rem;
+  height: 300px;
+  width: 365px;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
